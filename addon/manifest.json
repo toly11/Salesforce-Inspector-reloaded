@@ -11,19 +11,29 @@
   ],
   "host_permissions": [
     "https://*.salesforce.com/*",
+    "https://*.salesforce.mil/*",
     "https://*.force.com/*",
+    "https://*.force.mil/*",
     "https://*.cloudforce.com/*",
-    "https://*.visualforce.com/*"
+    "https://*.cloudforce.mil/*",
+    "https://*.visualforce.com/*",
+    "https://*.visualforce.mil/*"
   ],
   "content_scripts": [
     {
       "matches": [
         "https://*.salesforce.com/*",
+        "https://*.salesforce.mil/*",
         "https://*.visual.force.com/*",
+        "https://*.visual.force.mil/*",
         "https://*.vf.force.com/*",
         "https://*.lightning.force.com/*",
+        "https://*.lightning.force.mil/*",
+        "https://*.lightning.crmforce.mil/*",
         "https://*.cloudforce.com/*",
-        "https://*.visualforce.com/*"
+        "https://*.cloudforce.mil/*",
+        "https://*.visualforce.com/*",
+        "https://*.visualforce.mil/*"
       ],
       "all_frames": true,
       "css": [

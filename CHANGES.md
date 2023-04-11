@@ -3,6 +3,7 @@ Version 1.15
 
 General
 -------
+* Add support for .mil salesforce addresses [feature ](https://github.com/sorenkrabbe/Chrome-Salesforce-inspector/issues/206)
 * Add "PSet" button to access user permission set assignment from User tab [feature 49](https://github.com/tprouvot/Chrome-Salesforce-inspector/issues/49)
 * Add shortcut tab to access setup quick links [feature 42](https://github.com/tprouvot/Chrome-Salesforce-inspector/issues/42)
 

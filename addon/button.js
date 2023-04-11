@@ -8,7 +8,7 @@
 // location.host.endsWith("visualforce.com") = Visualforce page
 if (document.querySelector("body.sfdcBody, body.ApexCSIPage, #auraLoadingBox") || location.host.endsWith("visualforce.com")) {
   // We are in a Salesforce org
-  chrome.runtime.sendMessage({ message: "getSfHost", url: location.href }, sfHost => {
+  chrome.runtime.sendMessage({ message: "getSfHost", url: location.hostname }, sfHost => {
     if (sfHost) {
       initButton(sfHost, false);
     }
@@ -51,7 +51,7 @@ function initButton(sfHost, inInspector) {
       const overflowLabel = document.createElement("label");
       overflowLabel.textContent = "Enable flow scrollability";
       overflowLabel.htmlFor = "overflow-checkbox";
-      if (currentUrl.includes("sandbox")){
+      if (currentUrl.includes("sandbox")) {
         overflowCheckbox.className = "checkboxScrollSandbox";
         overflowLabel.className = "labelCheckboxScrollSandbox";
       } else {
@@ -72,7 +72,7 @@ function initButton(sfHost, inInspector) {
       // Set the overflow property to "auto"
       overflowCheckbox.checked ? style.textContent = ".canvas {overflow : auto!important ; }" : style.textContent = ".canvas {overflow : hidden!important ; }";
       // Listen for changes to the checkbox state
-      overflowCheckbox.addEventListener("change", function() {
+      overflowCheckbox.addEventListener("change", function () {
         // Check if the checkbox is currently checked
         // Save the checkbox state to local storage
         localStorage.setItem("scrollOnFlowBuilder", JSON.stringify(this.checked));
